@@ -1,32 +1,128 @@
-# Prerequisites
-*.d
+#include <iostream>
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+using namespace std;
 
-# Precompiled Headers
-*.gch
-*.pch
+int main()
+{
+    float mapa_mental, exposicion, evaluacion, test_intermedio, laboratorio, proyecto, PARCIAL1;
+    // PARCIAL 1
+    cout<<endl<<"INGRESE LAS NOTAS DEL PRIMER PARCIAL"<<endl;
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
+    cout<<endl<<"INGRESE LA NOTA DEL MAPA METAL"<< endl;
+    cin>> mapa_mental;
 
-# Fortran module files
-*.mod
-*.smod
+    cout<< "INGRESE LA NOTA DE LA EXPOSICION"<< endl;
+    cin>> exposicion;
 
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
+    cout<< "INGRESE LA NOTA DE LA EVALUACION"<< endl;
+    cin>> evaluacion;
 
-# Executables
-*.exe
-*.out
-*.app
+    cout<< "INGRESE LA NOTA DEL TEST INTERMEDIO"<< endl;
+    cin>> test_intermedio;
+
+    cout<< "INGRESE LA NOTA DEL LABORATORIO"<< endl;
+    cin>> laboratorio;
+
+    cout<< "INGRESE LA NOTA DEL PROYECTO "<< endl;
+    cin>> proyecto;
+
+    if((mapa_mental >= 0 && mapa_mental <= 20) &&
+        (exposicion >= 0 && exposicion <= 20) &&
+        (evaluacion >= 0 && evaluacion <= 20) &&
+        (test_intermedio >= 0 && test_intermedio <= 20) &&
+        (laboratorio >= 0 && laboratorio <= 20) &&
+        (proyecto >= 0 && proyecto <= 20) ){
+
+        PARCIAL1 = ((mapa_mental*10)/100)+((exposicion*10)/100)+((evaluacion*35)/100)+((test_intermedio*15)/100)+((laboratorio*15)/100)+((proyecto*15)/100);
+        cout<< "SU PROMEDIO FINAL DEL PRIMER PARCIAL ES: "<<PARCIAL1<< endl;
+
+    }
+    else
+        cout<<endl<<"ERROR SALE DEL RANGO"<<endl;
+
+    //PARCIAL 2
+
+    cout<<endl<<"INGRESE LAS NOTAS DEL SEGUNDO PARCIAL"<<endl;
+
+    float mapa_mental2, exposicion2, evaluacion2, test_intermedio2, laboratorio2, proyecto2, PARCIAL2;
+
+    cout<<endl<< "INGRESE LA NOTA DEL MAPA METAL"<< endl;
+    cin>> mapa_mental2;
+
+    cout<< "INGRESE LA NOTA DE LA EXPOSICION"<< endl;
+    cin>> exposicion2;
+
+    cout<< "INGRESE LA NOTA DE LA EVALUACION"<< endl;
+    cin>> evaluacion2;
+
+    cout<< "INGRESE LA NOTA DEL TEST INTERMEDIO"<< endl;
+    cin>> test_intermedio2;
+
+    cout<< "INGRESE LA NOTA DEL LABORATORIO"<< endl;
+    cin>> laboratorio2;
+
+    cout<< "INGRESE LA NOTA DEL PROYECTO "<< endl;
+    cin>> proyecto2;
+
+      if((mapa_mental2 >= 0 && mapa_mental2 <= 20) &&
+        (exposicion2 >= 0 && exposicion2 <= 20) &&
+        (evaluacion2 >= 0 && evaluacion2 <= 20) &&
+        (test_intermedio2 >= 0 && test_intermedio2 <= 20) &&
+        (laboratorio2 >= 0 && laboratorio2 <= 20) &&
+        (proyecto2 >= 0 && proyecto2 <= 20) ){
+
+        PARCIAL2 = ((mapa_mental2*10)/100)+((exposicion2*10)/100)+((evaluacion2*35)/100)+((test_intermedio2*15)/100)+((laboratorio2*15)/100)+((proyecto2*15)/100);
+        cout<< "SU PROMEDIO FINAL DEL SEGUNDO PARCIAL ES: "<<PARCIAL2<< endl;
+
+    }
+    else
+        cout<<endl<<"ERROR SALE DEL RANGO"<<endl;
+
+    //PARCIAL 3
+    cout<<endl<<"INGRESE LAS NOTAS DEL TERCER PARCIAL"<<endl;
+
+    float mapa_mental3, exposicion3, evaluacion3, test_intermedio3, laboratorio3, proyecto3, PARCIAL3,Vt;
+
+    cout<<endl<< "INGRESE LA NOTA DEL MAPA METAL"<< endl;
+    cin>> mapa_mental3;
+
+    cout<< "INGRESE LA NOTA DE LA EXPOSICION"<< endl;
+    cin>> exposicion3;
+
+    cout<< "INGRESE LA NOTA DE LA EVALUACION"<< endl;
+    cin>> evaluacion3;
+
+    cout<< "INGRESE LA NOTA DEL TEST INTERMEDIO"<< endl;
+    cin>> test_intermedio3;
+
+    cout<< "INGRESE LA NOTA DEL LABORATORIO"<< endl;
+    cin>> laboratorio3;
+
+    cout<< "INGRESE LA NOTA DEL PROYECTO "<< endl;
+    cin>> proyecto3;
+
+      if((mapa_mental3 >= 0 && mapa_mental3 <= 20) &&
+        (exposicion3 >= 0 && exposicion3 <= 20) &&
+        (evaluacion3 >= 0 && evaluacion3 <= 20) &&
+        (test_intermedio3 >= 0 && test_intermedio3 <= 20) &&
+        (laboratorio3 >= 0 && laboratorio3<= 20) &&
+        (proyecto3 >= 0 && proyecto3 <= 20) ){
+
+        PARCIAL3 = ((mapa_mental3*10)/100)+((exposicion3*10)/100)+((evaluacion3*35)/100)+((test_intermedio3*15)/100)+((laboratorio3*15)/100)+((proyecto3*15)/100);
+        cout<<"SU PROMEDIO FINAL DEL TERCER PARCIAL ES: "<<PARCIAL3<< endl;
+
+    }
+    else
+        cout<<endl<<"ERROR SALE DEL RANGO"<<endl;
+
+    Vt=(PARCIAL1+PARCIAL2+PARCIAL3)/3;
+    cout<<endl<<"SU PROMEDIO FINAL DEL SEMESTRE ES: "<<Vt<<endl;
+
+    if(Vt>=14){
+    cout<<endl<<"USTED PASO EL SEMESTRE";
+    }
+    else
+        cout<<"USTED DEBE REPETIR EL SEMESTRE";
+
+    return 0;
+}
